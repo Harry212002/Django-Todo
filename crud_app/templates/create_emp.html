@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CRUD + Django</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="text-center">Insert New Employee</h2>
+        <button><a href="/retrive/">Show All Employee</a></button>
+        <form action="/create_emp/" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="pwd">name:</label>
+                <input type="text" class="form-control" placeholder="Enter name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control"  placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Mobile No :</label>
+                <input type="text" class="form-control" placeholder="Enter Mobile No" name="mobile_no">
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+
+</body
